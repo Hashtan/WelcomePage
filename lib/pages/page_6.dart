@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:welcome_pages/pages/home_screen.dart';
 import 'package:welcome_pages/pages/pages.dart';
-import 'package:welcome_pages/widgets/two_buttons_widget.dart';
+import 'package:welcome_pages/widgets/one_button_widget.dart';
 
 class SixthPage extends StatelessWidget {
   const SixthPage({super.key});
@@ -9,9 +8,9 @@ class SixthPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Pages(
-        title: 'Spędzaj czas\nkreatywnie!',
-        boldWord: 'kreatywnie',
-        image: 'assets/images/2.png',
-        widget: TwoButtonsWidget(page: HomeScreen()));
+        title: 'Złap swój rytm!',
+        boldWord: 'swój rytm',
+        image: 'assets/images/1.png',
+        widget: OneButtonWidget());
   }
 }

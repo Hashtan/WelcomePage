@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_pages/pages/home_screen.dart';
-import 'package:welcome_pages/styles/button_style.dart';
+import 'package:welcome_pages/styles/button_styles.dart';
 import 'package:welcome_pages/styles/text_styles.dart';
 
 class TwoButtonsWidget extends StatelessWidget {

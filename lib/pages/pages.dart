@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_pages/styles/box_decorations.dart';
 import 'package:welcome_pages/styles/text_styles.dart';
 
 class Pages extends StatelessWidget {
@@ -18,12 +19,7 @@ class Pages extends StatelessWidget {
   Widget build(BuildContext context) {
     final parts = title.split(boldWord);
     return Container(
-        decoration: const BoxDecoration(
-            gradient: RadialGradient(
-                center: AlignmentDirectional(0, -0.3),
-                radius: 0.35,
-                colors: [Colors.white, Color.fromRGBO(62, 110, 167, 1)],
-                stops: [0.03, 1])),
+        decoration: BoxDecorations.backgroundColour,
         child: Scaffold(
             backgroundColor: Colors.transparent,
             body: SafeArea(

@@ -9,9 +9,9 @@ class ThirdPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Pages(
-        title: 'Spędzaj czas\nkreatywnie!',
-        boldWord: 'kreatywnie',
-        image: 'assets/images/2.png',
+        title: 'Poznawaj\nnieodkryte szlaki!',
+        boldWord: 'szlaki',
+        image: 'assets/images/4.png',
         widget: TwoButtonsWidget(page: FourthPage()));
   }
 }

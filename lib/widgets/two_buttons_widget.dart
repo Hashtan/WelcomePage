@@ -4,15 +4,16 @@ import 'package:welcome_pages/styles/button_styles.dart';
 import 'package:welcome_pages/styles/text_styles.dart';
 
 class TwoButtonsWidget extends StatelessWidget {
-  const TwoButtonsWidget({super.key, required this.page});
+  const TwoButtonsWidget(
+      {super.key, required this.controller});
 
-  final Widget page;
+  final PageController controller;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        const SizedBox(width: 50),
         TextButton(
             onPressed: () {
               Navigator.push(context,
@@ -20,18 +21,16 @@ class TwoButtonsWidget extends StatelessWidget {
             },
             child: Text('Pomiń',
                 style: TextStyles.heading.copyWith(color: Colors.grey))),
-        const Expanded(child: SizedBox()),
         TextButton(
             style: ButtonStyles.blueButton,
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => page));
+              controller.nextPage(duration: const Duration(milliseconds: 300),
+                  curve: Curves.easeInOut);
             },
             child: const Padding(
               padding: EdgeInsets.only(left: 25.0, right: 25.0),
               child: Text('Dalej', style: TextStyles.headingBold),
             )),
-        const SizedBox(width: 50)
       ],
     );
   }
